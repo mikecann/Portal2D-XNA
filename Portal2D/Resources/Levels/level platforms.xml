@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding= "utf-8"?>
+
+<level type ="lab" name= "mapname">
+<description>
+enter description here
+</description>
+<resources>
+<sprite url="Resources/Textures/Girder-100-10" type= "static" collision= "rectangle" w= "100" h= "10" restitution= "0.3" friction= "0.3" name = "Girder-100-10" /> 
+<sprite url="Resources/Textures/Girder-10-300" type= "static" collision= "rectangle" w= "10" h= "300" restitution= "0.3" friction= "0.3" name = "Girder-10-300" /> 
+<sprite url="Resources/Textures/Girder-300-10" type= "static" collision= "rectangle" w= "300" h= "10" restitution= "0.3" friction= "0.3" name = "Girder-300-10" /> 
+<sprite url="Resources/Textures/Girder-10-480" type= "static" collision= "rectangle" w= "10" h= "480" restitution= "0.3" friction= "0.3" name = "Girder-10-480" /> 
+<sprite url="Resources/Textures/Box-50-50" type= "static" collision= "rectangle" w= "50" h= "50" restitution= "0.3" friction= "0.3" name = "Box-50-50" /> 
+<sprite url="Resources/Textures/Girder-600-10" type= "static" collision= "rectangle" w= "600" h= "10" restitution= "0.3" friction= "0.3" name = "Girder-600-10" /> 
+<sprite url="Resources/Textures/BrownWall-300-300" type= "static" collision= "rectangle" w= "300" h= "300" restitution= "0.3" friction= "0.3" name = "BrownWall-300-300" /> 
+</resources>
+<objects>
+<obj resource= "Girder-100-10" x= "150" y= "186" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-10-300" x= "197" y= "341" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-300-10" x= "52" y= "496" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-10-480" x= "-92" y= "250" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Box-50-50" x= "171" y= "147" type= "dynamic" canAttachPortalTo= "False" orientation= "0"/>
+<obj resource= "Box-50-50" x= "171" y= "77" type= "dynamic" canAttachPortalTo= "False" orientation= "0"/>
+<obj resource= "Girder-300-10" x= "53" y= "5" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-600-10" x= "503" y= "5" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-10-480" x= "798" y= "250" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-600-10" x= "503" y= "497" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-100-10" x= "743" y= "245" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-100-10" x= "742" y= "136" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-100-10" x= "642" y= "136" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "952" y= "52" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "952" y= "352" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-10-300" x= "559" y= "160" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "Girder-100-10" x= "614" y= "306" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "52" y= "651" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "352" y= "652" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "652" y= "652" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "952" y= "652" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "654" y= "-151" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "354" y= "-151" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "54" y= "-152" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "-248" y= "157" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "-248" y= "457" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "-249" y= "757" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+<obj resource= "BrownWall-300-300" x= "-247" y= "-143" type= "static" canAttachPortalTo= "True" orientation= "0"/>
+</objects>
+<triggers>
+<trigger type = "player_spawn" x= "-14" y= "456"/>
+<trigger type = "exit" nextLevel="training" x= "749" y= "195"/>
+</triggers>
+</level>

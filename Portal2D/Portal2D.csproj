@@ -1,0 +1,760 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{983F3465-3D87-4063-B63B-A51824342FC3}</ProjectGuid>
+    <ProjectTypeGuids>{9F340DF3-2AED-4330-AC16-78AC2D9B4738};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portal2D</RootNamespace>
+    <AssemblyName>Portal2D</AssemblyName>
+    <XnaFrameworkVersion>v1.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <XNAGlobalContentPipelineAssemblies>Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll;Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll;Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll;Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</XNAGlobalContentPipelineAssemblies>
+    <XNAProjectContentPipelineAssemblies>
+    </XNAProjectContentPipelineAssemblies>
+    <ManifestCertificateThumbprint>56B45E710728D5E1432D50FC6E86C754ED2A69EC</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Portal2D_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Xna.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Font\BitmapFont.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>BitmapFont</Name>
+    </Compile>
+    <Compile Include="Font\cFontManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cFontManager</Name>
+    </Compile>
+    <Compile Include="GameEngine\HUD\cHUD.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cHUD</Name>
+    </Compile>
+    <Compile Include="GameEngine\Scene\cShaderObject.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cShaderObject</Name>
+    </Compile>
+    <Compile Include="GameEngine\Triggers\cExit.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cExit</Name>
+    </Compile>
+    <Compile Include="GameEngine\Utils\cMath.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMath</Name>
+    </Compile>
+    <Compile Include="Menus\cMenuOptionsWindowButton.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenuOptionsWindowButton</Name>
+    </Compile>
+    <Compile Include="Menus\cMenuTextButton.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenuTextButton</Name>
+    </Compile>
+    <Compile Include="Menus\cMenuWindowButton.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenuWindowButton</Name>
+    </Compile>
+    <Compile Include="Menus\cMenuWindow.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenuWindow</Name>
+    </Compile>
+    <Compile Include="Menus\cMenuButton.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenuButton</Name>
+    </Compile>
+    <Compile Include="Menus\iButtonClickListener.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>iButtonClickListener</Name>
+    </Compile>
+    <Compile Include="Menus\cTextParser.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cTextParser</Name>
+    </Compile>
+    <Compile Include="Portal2D.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Portal2D</Name>
+    </Compile>
+    <Compile Include="GameEngine\Audio\cAudio.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cAudio</Name>
+    </Compile>
+    <Compile Include="GameEngine\cPlayer.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPlayer</Name>
+    </Compile>
+    <Compile Include="GameEngine\Triggers\cFlameEffect.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cFlameEffect</Name>
+    </Compile>
+    <Compile Include="GameEngine\Input\cInput.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cInput</Name>
+    </Compile>
+    <Compile Include="GameEngine\Lights\cLight.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cLight</Name>
+    </Compile>
+    <Compile Include="GameEngine\Lights\cLightMapManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cLightMapManager</Name>
+    </Compile>
+    <Compile Include="GameEngine\Lights\iLightMapRenderable.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>iLightMapRenderable</Name>
+    </Compile>
+    <Compile Include="GameEngine\Particles\cEmitter.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cEmitter</Name>
+    </Compile>
+    <Compile Include="GameEngine\Particles\cParticleFairy.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cParticleFairy</Name>
+    </Compile>
+    <Compile Include="GameEngine\Particles\cParticle.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cParticle</Name>
+    </Compile>
+    <Compile Include="GameEngine\Particles\cParticleBlueprint.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cParticleBlueprint</Name>
+    </Compile>
+    <Compile Include="GameEngine\Particles\cParticleEngine.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cParticleEngine</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cPhysics.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPhysics</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cRayCollision.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cRayCollision</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cRayUtils.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cRayUtils</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cRigidBodyCircleObject.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cRigidBodyCircleObject</Name>
+    </Compile>
+    <Compile Include="GameEngine\Portals\cPortal.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPortal</Name>
+    </Compile>
+    <Compile Include="GameEngine\Portals\cPortalManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPortalManager</Name>
+    </Compile>
+    <Compile Include="GameEngine\PostProcessing\cPostProcessing.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPostProcessing</Name>
+    </Compile>
+    <Compile Include="GameEngine\PostProcessing\cPostProcessBatch.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cPostProcessBatch</Name>
+    </Compile>
+    <Compile Include="GameEngine\Scene\cCamera.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cCamera</Name>
+    </Compile>
+    <Compile Include="GameEngine\Scene\cEffectManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cEffectManager</Name>
+    </Compile>
+    <Compile Include="GameEngine\Scene\cGameObject.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cGameObject</Name>
+    </Compile>
+    <Compile Include="GameEngine\Scene\cScene.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cScene</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cRigidBodyGameObject.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cRigidBodyGameObject</Name>
+    </Compile>
+    <Compile Include="GameEngine\Physics\cRigidBodyRectangleObject.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cRigidBodyRectangleObject</Name>
+    </Compile>
+    <Compile Include="GameEngine\Sprites\cAnimatedSprite.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cAnimatedSprite</Name>
+    </Compile>
+    <Compile Include="GameEngine\Sprites\cCustomSpriteBatch.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cCustomSpriteBatch</Name>
+    </Compile>
+    <Compile Include="GameEngine\Sprites\cSprite.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cSprite</Name>
+    </Compile>
+    <Compile Include="GameEngine\Sprites\cSpriteBatch.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cSpriteBatch</Name>
+    </Compile>
+    <Compile Include="GameEngine\Sprites\cSpriteManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cSpriteManager</Name>
+    </Compile>
+    <Compile Include="Menus\cMenu.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cMenu</Name>
+    </Compile>
+    <Compile Include="Program.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Program</Name>
+    </Compile>
+    <Compile Include="GameEngine\cEngine.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cEngine</Name>
+    </Compile>
+    <Compile Include="Videos\cVideo.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>cVideo</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Game</Name>
+    </Content>
+    <Content Include="Resources\Textures\Girder-10-480.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Girder-10-480</Name>
+    </Content>
+    <Content Include="Resources\Textures\Box-50-50.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Box-50-50</Name>
+    </Content>
+    <Content Include="Resources\Textures\Girder-600-10.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Girder-600-10</Name>
+    </Content>
+    <Content Include="Resources\Sprites\bazooka.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>bazooka</Name>
+    </Content>
+    <Content Include="Resources\Textures\Box-200-200.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Box-200-200</Name>
+    </Content>
+    <Content Include="Resources\Levels\Training.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Training</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sprites\portal.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>portal</Name>
+    </Content>
+    <Content Include="Resources\Sprites\portalblob.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>portalblob</Name>
+    </Content>
+    <Content Include="Resources\Sprites\teleport.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>teleport</Name>
+    </Content>
+    <Content Include="Resources\Textures\wall01-800-600.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>wall01-800-600</Name>
+    </Content>
+    <Content Include="Resources\Sprites\worm.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>worm</Name>
+    </Content>
+    <Content Include="Resources\Sprites\worm_anim.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>worm_anim</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sprites\worm_bigger.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>worm_bigger</Name>
+    </Content>
+    <Content Include="Resources\Sprites\player_spawn_anim.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>player_spawn_anim</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FarseerXNAPhysics\FarseerXNAPhysics.csproj">
+      <Project>{65036840-B422-48B0-B923-4902CFC0B974}</Project>
+      <Name>FarseerXNAPhysics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Audio\Portal2DSounds.xap">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>XactImporter</Importer>
+      <Processor>XactProcessor</Processor>
+      <Name>Portal2DSounds</Name>
+    </Content>
+    <Content Include="Resources\Sprites\particle-blue.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>particle-blue</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LightMaps\PointLight-30-30.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PointLight-30-30</Name>
+    </Content>
+    <Content Include="Resources\LightMaps\PointLight-400-400.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PointLight-400-400</Name>
+    </Content>
+    <Content Include="Resources\LightMaps\PointLight-800-800.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PointLight-800-800</Name>
+    </Content>
+    <Content Include="Resources\LightMaps\portalLightMap.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>portalLightMap</Name>
+    </Content>
+    <Content Include="Resources\Textures\BrownWall-300-300.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>BrownWall-300-300</Name>
+    </Content>
+    <Content Include="Resources\Textures\Girder-300-10.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Girder-300-10</Name>
+    </Content>
+    <Content Include="Resources\Textures\WallLamp-10-10.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>WallLamp-10-10</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Textures\Flame.tga">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Flame</Name>
+    </Content>
+    <Content Include="Resources\Textures\flame2.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>flame2</Name>
+    </Content>
+    <Content Include="Resources\Textures\NoiseVolume.dds">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>NoiseVolume</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Textures\WallLamp-8-20.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>WallLamp-8-20</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Portal2D_TemporaryKey.pfx">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Portal2D_TemporaryKey</Name>
+    </None>
+    <None Include="playerRecords.ini">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>playerRecords</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\Levels\level flame.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>level flame</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Levels\level platforms.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>level platforms</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Menu\button2.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>button2</Name>
+    </Content>
+    <Content Include="Resources\Menu\quickgamewindow2.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>quickgamewindow2</Name>
+    </Content>
+    <Content Include="Resources\Menu\text.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>text</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shaders\Fire\FlameEffect.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>FlameEffect</Name>
+    </Content>
+    <Content Include="Resources\Shaders\Bloom\brightPass.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>brightPass</Name>
+    </Content>
+    <Content Include="Resources\Shaders\Bloom\downsamplePass.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>downsamplePass</Name>
+    </Content>
+    <Content Include="Resources\Shaders\Bloom\finalPass.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>finalPass</Name>
+    </Content>
+    <Content Include="Resources\Shaders\Bloom\hozbloom.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>hozbloom</Name>
+    </Content>
+    <Content Include="Resources\Shaders\Bloom\vertbloom.fx">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>vertbloom</Name>
+    </Content>
+    <Content Include="Resources\Menu\optionswindowtab.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>optionswindowtab</Name>
+    </Content>
+    <Content Include="Resources\HUD\descripwindow.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>descripwindow</Name>
+    </Content>
+    <Content Include="Resources\HUD\hudboarder.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>hudboarder</Name>
+    </Content>
+    <Content Include="Resources\HUD\timerbackdrop.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>timerbackdrop</Name>
+    </Content>
+    <Content Include="Resources\Fonts\Treb11-0.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Treb11-0</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Treb11.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Treb11</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Treb8-0.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Treb8-0</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Treb8.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Treb8</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HUD\hud_lives.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>hud_lives</Name>
+    </Content>
+    <Content Include="Resources\LightMaps\PointLight-100-100.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PointLight-100-100</Name>
+    </Content>
+    <Content Include="Resources\LightMaps\PointLight-200-200.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PointLight-200-200</Name>
+    </Content>
+    <Content Include="Resources\Menu\basic_blank_window.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>basic_blank_window</Name>
+    </Content>
+    <Content Include="Resources\Menu\button1.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>button1</Name>
+    </Content>
+    <Content Include="Resources\Menu\controlswindow.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>controlswindow</Name>
+    </Content>
+    <Content Include="Resources\Menu\half-life2_pointer.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>half-life2_pointer</Name>
+    </Content>
+    <Content Include="Resources\Menu\half-life2_pointer2.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>half-life2_pointer2</Name>
+    </Content>
+    <Content Include="Resources\Menu\newgamewindow.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>newgamewindow</Name>
+    </Content>
+    <Content Include="Resources\Menu\optionswindow.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>optionswindow</Name>
+    </Content>
+    <Content Include="Resources\Menu\optionswindowtab1.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>optionswindowtab1</Name>
+    </Content>
+    <Content Include="Resources\Menu\PortalLogoHiRes.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PortalLogoHiRes</Name>
+    </Content>
+    <Content Include="Resources\Menu\quickgamehighlight.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>quickgamehighlight</Name>
+    </Content>
+    <Content Include="Resources\Menu\quickgamewindow.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>quickgamewindow</Name>
+    </Content>
+    <Content Include="Resources\Menu\textcontinue.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>textcontinue</Name>
+    </Content>
+    <Content Include="Resources\Menu\textnewgame.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>textnewgame</Name>
+    </Content>
+    <Content Include="Resources\Menu\textoptions.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>textoptions</Name>
+    </Content>
+    <Content Include="Resources\Menu\textquickgame.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>textquickgame</Name>
+    </Content>
+    <Content Include="Resources\Menu\textquit.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>textquit</Name>
+    </Content>
+    <Content Include="Resources\Sprites\egon_anim.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>egon_anim</Name>
+    </Content>
+    <Content Include="Resources\Sprites\egon_anim.xml">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>egon_anim</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sprites\exit.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>exit</Name>
+    </Content>
+    <Content Include="Resources\Sprites\part02.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>part02</Name>
+    </Content>
+    <Content Include="Resources\Textures\Box-White-50-50.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Box-White-50-50</Name>
+    </Content>
+    <Content Include="Resources\Textures\BoxMetal-50-50.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>BoxMetal-50-50</Name>
+    </Content>
+    <Content Include="Resources\Textures\Girder-10-300.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Girder-10-300</Name>
+    </Content>
+    <Content Include="Resources\Textures\Girder-100-10.PNG">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>Girder-100-10</Name>
+    </Content>
+    <Content Include="Resources\Textures\green-rod-15-30.png">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>green-rod-15-30</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA\Game Studio Express\v1.0\Microsoft.Xna.ContentPipeline.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA\Game Studio Express\v1.0\Microsoft.Xna.Common.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+	<level type="lab" name="Training">
+
+		<!-- in the future this should realy support HTML (tabs are ignored here) -->
+		<description>
+			Welcome to the labs! You are tasked with 
+			   testing the new prototype handheled 
+			 portal device. There are many obsticles 
+			   along the way to impede yor flow but 
+			   should you succeed then you shall be 
+			 offered a permanant place at the lambda 
+			                               complex.
+		</description>
+		
+	<!-- always load the resources BEFORE the objects!! -->
+	<resources>
+		<sprite url="Resources/Textures/Girder-10-480" type="static" collision="rectangle" w="10" h="480" restitution="0.3" friction="0.3" name="Girder-10-480"/>
+		<sprite url="Resources/Textures/Girder-600-10" type="static" collision="rectangle" w="600" h="10" restitution="0.3" friction="0.3" name="Girder-600-10"/>
+		<sprite url="Resources/Textures/Girder-300-10" type="static" collision="rectangle" w="300" h="10" restitution="0.3" friction="0.3" name="Girder-300-10"/>
+		<sprite url="Resources/Textures/Box-200-200" type="static" collision="rectangle" w="200" h="200" restitution="0.3" friction="0.3" name="Box-200-200"/>
+		<sprite url="Resources/Textures/Box-50-50" type="static" collision="rectangle" w="50" h="50" mass="1" restitution="0.1" friction="0.2" name="Box-50-50"/>
+		<sprite url="Resources/Textures/BoxMetal-50-50" type="static" collision="rectangle" w="50" h="50" mass="50" restitution="0.1" friction="0.2" name="BoxMetal-50-50"/>
+		<sprite url="Resources/Textures/green-rod-15-30" type="static" collision="rectangle" w="15" h="30" mass="2" restitution="0.1" friction="0.2" name="green-rod-15-30"/>
+		<sprite url="Resources/LightMaps/PointLight-800-800" type="static" name="PointLight-800-800"/>
+		<sprite url="Resources/LightMaps/PointLight-400-400" type="static" name="PointLight-400-400"/>
+		<sprite url="Resources/LightMaps/PointLight-200-200" type="static" name="PointLight-200-200"/>
+		<sprite url="Resources/Textures/WallLamp-8-20" type="static" name="WallLamp-8-20"/>
+		<sprite url="Resources/Textures/BrownWall-300-300" type="static" collision="rectangle" w="300" h="300" mass="1" restitution="0.1" friction="0.2" name="BrownWall-300-300"/>
+	</resources>
+
+	<!-- always load the objects AFTER the resources!! -->
+	<objects>
+		
+		<obj resource="Girder-600-10" x="0" y="500" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="Girder-600-10" x="0" y="200" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="Girder-600-10" x="600" y="200" type="static" canAttachPortalTo="true" orientation="0"/>		
+		
+		<obj resource="Girder-300-10" x="-300" y="350" type="static" canAttachPortalTo="true" orientation="90"/>
+		<obj resource="Girder-300-10" x="300" y="650" type="static" canAttachPortalTo="true" orientation="90"/>
+		<obj resource="Girder-300-10" x="600" y="650" type="static" canAttachPortalTo="true" orientation="90"/>
+		<obj resource="Girder-300-10" x="450" y="800" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="Girder-300-10" x="750" y="500" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="Girder-300-10" x="900" y="350" type="static" canAttachPortalTo="true" orientation="90"/>
+		<obj resource="Girder-300-10" x="750" y="200" type="static" canAttachPortalTo="true" orientation="0"/>
+		
+		<obj resource="BrownWall-300-300" x="-455" y="55" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="-455" y="355" type="static" canAttachPortalTo="true" orientation="0"/>		
+		<obj resource="BrownWall-300-300" x="-455" y="655" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="-155" y="655" type="static" canAttachPortalTo="true" orientation="0"/>	
+		<obj resource="BrownWall-300-300" x="145" y="655" type="static" canAttachPortalTo="true" orientation="0"/>		
+		<obj resource="BrownWall-300-300" x="-450" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="-150" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="150" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="450" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="750" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="1050" y="45" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="1050" y="345" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="1050" y="645" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="1050" y="945" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="750" y="950" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="750" y="650" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="450" y="950" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="150" y="950" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="-150" y="950" type="static" canAttachPortalTo="true" orientation="0"/>
+		<obj resource="BrownWall-300-300" x="-450" y="950" type="static" canAttachPortalTo="true" orientation="0"/>
+				
+		<!--
+		<obj resource="Box-50-50" x="790" y="450" type="dynamic" orientation="0"/>
+		<obj resource="Box-50-50" x="795" y="400" type="dynamic" orientation="0"/>
+		<obj resource="BoxMetal-50-50" x="800" y="350" type="dynamic" orientation="0"/>
+		<obj resource="BoxMetal-50-50" x="800" y="300" type="dynamic" orientation="0"/>
+			  -->
+
+		<obj resource="green-rod-15-30" x="000" y="480" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="030" y="480" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="060" y="480" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="000" y="449" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="030" y="449" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="060" y="449" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="000" y="411" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="030" y="411" type="dynamic" orientation="0"/>
+		<obj resource="green-rod-15-30" x="060" y="411" type="dynamic" orientation="0"/>
+		
+	</objects>
+
+	<triggers>
+		<trigger type="player_spawn" x="-200" y="400" />
+		<trigger type="exit" x="800" y="450" nextLevel="level flame" audio="levelCompletion1"/>
+		<trigger type="flame" x="450" y="640" w="290" h="300" />
+	</triggers>
+
+	<lights>
+		<light type="point" resource="WallLamp-8-20" lightMap="PointLight-200-200" x="100" y="210" />
+		<light type="point" resource="WallLamp-8-20" lightMap="PointLight-200-200" x="800" y="210" />
+	</lights>
+
+</level>

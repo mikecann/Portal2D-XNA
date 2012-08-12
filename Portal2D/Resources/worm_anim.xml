@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<sprite url="worm_bigger.png">
+
+	<animation name="stand" loop="none">
+		<frame number="0" x="0" y="0" w="30" h="36" />		
+	</animation>
+	
+	<animation name="walk" loop="reverse" frameLength="80">
+		<frame number="0" x="30" y="0" w="30" h="36" />
+		<frame number="1" x="60" y="0" w="30" h="36" />
+		<frame number="2" x="90" y="0" w="30" h="36" />
+	</animation>
+
+	<animation name="jump" loop="reverse" frameLength="30">
+		<frame number="0" x="121" y="0" w="30" h="36" />
+		<frame number="1" x="151" y="0" w="30" h="36" />
+		<frame number="2" x="181" y="0" w="30" h="36" />
+	</animation>
+	
+</sprite>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<sprite url="teleport.png">
+
+	<!-- this is an effect, ALL effects should have a single animation called main -->
+	<animation name="main" loop="none">
+		<frame number="0" x="0" y="0" w="31" h="31" l="100" />		
+		<frame number="1" x="31" y="0" w="31" h="31" l="100" />	
+		<frame number="2" x="62" y="0" w="31" h="31" l="100" />	
+		<frame number="3" x="93" y="0" w="31" h="31" l="100" />	
+		<frame number="4" x="124" y="0" w="31" h="31" l="100" />	
+		<frame number="5" x="155" y="0" w="31" h="31" l="100" />	
+	</animation>
+	
+</sprite>

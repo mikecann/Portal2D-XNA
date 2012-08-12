@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<sprite url="Resources/Sprites/egon_anim">
+
+	<animation name="stand" loop="none">
+		<frame number="0" x="0" y="0" w="30" h="46" />		
+	</animation>
+
+	<animation name="aim45" loop="none">
+		<frame number="0" x="210" y="0" w="30" h="46" />
+	</animation>
+
+	<animation name="aim90" loop="none">		
+		<frame number="0" x="180" y="0" w="30" h="46" />
+	</animation>
+	
+	<animation name="walk" loop="repeat" frameLength="100">
+		<frame number="0" x="30" y="0" w="30" h="46" />
+		<frame number="1" x="60" y="0" w="30" h="46" />
+		<frame number="2" x="90" y="0" w="30" h="46" />
+	</animation>
+	
+	<animation name="jump" loop="none">		
+		<frame number="0" x="150" y="0" w="30" h="46" />
+	</animation>
+	
+</sprite>

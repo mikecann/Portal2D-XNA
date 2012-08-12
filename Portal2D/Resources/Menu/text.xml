@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+	<keyboard_controls>
+
+		<controls x="473" y="193" name="Move Left" key="A" format ="12"/>
+		<controls x="473" y="213" name="Move Right" key="D" format ="12"/>
+		<controls x="473" y="233" name="Jump" key="W" format ="12"/>
+		<controls x="473" y="358" name="Open Portal One" key="LMB" format ="12"/>
+		<controls x="473" y="378" name="Open Portal Two" key="RMB" format ="12"/>
+
+	</keyboard_controls>
